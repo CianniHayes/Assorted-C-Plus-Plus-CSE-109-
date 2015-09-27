@@ -1,0 +1,5 @@
+LOADV x
+LOADV y
+ADD
+LOADV z
+MULT

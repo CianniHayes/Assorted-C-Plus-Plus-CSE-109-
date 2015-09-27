@@ -1,0 +1,7 @@
+PROGRAM sample
+
+SET x = 0
+FOR i = x TO x + 3
+ PRINT i
+END
+END PROGRAM   

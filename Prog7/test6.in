@@ -1,0 +1,19 @@
+PROGRAM sample
+
+SET x = 3
+
+FOR i = x - 2 TO x + 7
+  IF i / 2 * 2 == i THEN
+     PRINT "The value ", i, " is even"
+  ELSE
+     PRINT "The value ", i, " is odd"
+  ENDIF
+  SET x = x * 2
+END
+
+SET y = 2
+SET i = y
+WHILE i >= y AND i <= 2 * y DO
+   PRINT  i
+   SET i = i + 1
+END 

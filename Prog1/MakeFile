@@ -1,0 +1,6 @@
+run: scramble
+	cat gettysburg.txt|./scramble
+scramble: clean
+	g++ scramble.cc  -g -Werror -Wall -o scramble
+clean:
+	rm ./a.out 

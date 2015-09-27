@@ -1,0 +1,13 @@
+all: spellchecker
+       
+spellchecker: spellchecker.o functions.o
+	      g++ spellchecker.o functions.o -o spellchecker
+
+functions.o: functions.cc clean
+	     g++ functions.cc -c -g  -Wall -Werror 
+
+spellchecker.o: spellchecker.cc clean
+		g++ spellchecker.cc -c -g -Wall -Werror
+	
+clean:
+	rm -rf *.o *.~ spellchecker	

@@ -1,0 +1,6 @@
+# hello this is a comment #
+set count = 10
+while ( count <= 20 ) do
+set count = count + 1.34
+print "The value of count is " , count
+end

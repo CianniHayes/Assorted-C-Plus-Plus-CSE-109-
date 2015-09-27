@@ -1,0 +1,61 @@
+#Stephen A. Friedman
+#saf217@lehigh.edu
+#Hw2
+#Make first guess 1.0
+LOADL 1.0
+STOREV GUESS
+top:
+LOADV GUESS
+LOADV GUESS
+LOADV GUESS
+MULT
+MULT
+LOADL 2197.0
+SUB
+STOREV NUMERATOR
+LOADV GUESS
+LOADV GUESS
+MULT
+LOADL 3.0
+MULT
+STOREV DENOMINATOR
+LOADV NUMERATOR
+LOADV DENOMINATOR
+DIV
+STOREV FRACTION
+LOADV GUESS
+LOADV FRACTION
+SUB
+STOREV GUESS2
+#At this point a new guess has been created from the guess before it
+LOADV GUESS
+LOADV GUESS2
+SUB
+STOREV DIFFERENCE
+LOADV DIFFERENCE
+LOADL 0
+ISGE
+#if the difference is less than 0, just make it the absolute value
+JUMPF negativeDifference
+continue2:
+LOADV DIFFERENCE
+LOADL .000001
+ISLE
+LOADV GUESS2
+STOREV GUESS
+#Only executed if the guess was not within range
+#This sends the program to the top to keep guessing
+JUMPF top
+STOREV THROWAWAY
+LOADV GUESS2
+PRINTS "The cube root of 2197 is: "
+PRINT
+#program is done, here I end it
+JUMP end
+negativeDifference:
+LOADL -1
+LOADV DIFFERENCE
+MULT
+STOREV DIFFERENCE
+JUMP continue2
+end:

@@ -1,0 +1,18 @@
+
+all: testtrie
+
+testtrie: Trie.o Node.o Link.o
+        g++ testtrie.o Node.o Link.o Trie.o -o testtrie
+
+Trie.o: Trie.cc Trie.h Node.h Node.cc Link.cc Link.h
+        g++ Trie.cc -c -g -Wall -Werror
+
+Node.o: Node.cc Node.h Trie.cc Trie.h Link.cc Link.h
+        g++ Node.cc -c -g -Wall -Werror
+
+Link.o: Link.cc Link.h Node.cc Node.h Trie.cc Trie.h
+        g++ Link.cc -c -g -Wall -Werror
+
+clean:
+        rm -rf *.o *.~ testtrie
+

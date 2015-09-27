@@ -1,0 +1,46 @@
+ Question 1.
+          
+          what does first set mean?
+          does <q>+ mean at least one or does it mean youy could have possibly 0 of them?
+          ANSWER: AX or BY or CZ or K
+
+ Quesrtion 2:
+           what does follow set mean?
+           ANSWER: DO
+           
+ Question 3:
+          ANSWER: if A isnt followed by X
+                  or B isnt followed by Y
+                  or C isnt followed by Z
+                  or next token isnt a K
+                  
+ Question 4:
+          SEE PAPER
+          
+ Question 5:
+          SEE PAPER
+          
+ Question 6:
+          LOADL 7
+          LOADL 3
+          MULT
+          LOADL 0
+          ADD
+          STOREV X
+ 
+ Question 7:
+
+ 
+ Question 8:
+          Why does passing c as opposed to *c make it work the way it does?
+          
+ Question 14:
+          delete [] values;
+          
+ Question 16:
+          if theres an ostream then << then a Person then what gets put out is: persons name persons age
+          
+          
+
+
+          struct Person *      p = malloc(sizeof(struct Person));
